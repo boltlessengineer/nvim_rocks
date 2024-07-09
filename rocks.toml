@@ -1,0 +1,82 @@
+# This is your rocks.nvim plugins declaration file.
+# Here is a small yet pretty detailed example on how to use it:
+#
+# [plugins]
+# nvim-treesitter = "semver_version"  # e.g. "1.0.0"
+
+# List of non-Neovim rocks.
+# This includes things like `toml` or other lua packages.
+[rocks]
+
+# List of Neovim plugins to install alongside their versions.
+# If the plugin name contains a dot then you must add quotes to the key name!
+[plugins]
+"rocks.nvim" = "2.35.0"
+"rocks-git.nvim" = "1.5.1"
+"rocks-dev.nvim" = "1.2.3"
+"rocks-config.nvim" = "2.1.3"
+"rocks-edit.nvim" = "scm"
+"rocks-treesitter.nvim" = "scm"
+# harpoon uses plenary.nvim
+"plenary.nvim" = "scm"
+github-nvim-theme = "1.0.2"
+nvim-lspconfig = "0.1.8"
+"mason.nvim" = "1.10.0"
+"indent-blankline.nvim" = "3.7.1"
+"conform.nvim" = "6.0.0"
+"fidget.nvim" = "1.4.1"
+nvim-ufo = "1.4.0"
+luasnip = "2.3.0"
+neogit = "scm"
+"kanagawa.nvim" = "scm"
+"rest.nvim" = "2.0.1"
+"mini.ai" = "scm"
+nvim-surround = "2.1.5"
+nvim-treesitter-legacy-api = "0.9.2"
+fzf-lua = "0.0.1363"
+
+tree-sitter-css = "scm"
+tree-sitter-ecma = "scm"
+tree-sitter-go = "scm"
+tree-sitter-html = "scm"
+tree-sitter-http = "scm"
+tree-sitter-javascript = "scm"
+tree-sitter-json = "scm"
+tree-sitter-jsx = "scm"
+tree-sitter-lua = "scm"
+tree-sitter-make = "scm"
+tree-sitter-query = "scm"
+tree-sitter-rust = "scm"
+tree-sitter-templ = "scm"
+tree-sitter-toml = "scm"
+tree-sitter-tsx = "scm"
+tree-sitter-typescript = "scm"
+tree-sitter-yaml = "scm"
+
+"oil.nvim" = { git = "stevearc/oil.nvim", rev = "v2.9.0" }
+nvim-cmp = { git = "hrsh7th/nvim-cmp" }
+cmp-nvim-lsp = { git = "hrsh7th/cmp-nvim-lsp" }
+"leap.nvim" = { git = "ggandor/leap.nvim" }
+harpoon = { git = "ThePrimeagen/harpoon", branch = "harpoon2" }
+# for some plugins that needs legacy api (e.g. nvim-surround)
+nvim-treesitter-textobjects = { dir = "~/repo/nvim-treesitter-textobjects" }
+# neodev doesn't work when installed from luarocks
+# "neodev.nvim" = { git = "folke/neodev.nvim", rev = "v3.0.0" }
+nvim-lint = "scm"
+tree-sitter-gomod = "scm"
+tree-sitter-dockerfile = "scm"
+tree-sitter-regex = "scm"
+
+[plugins."crates.nvim" ]
+git = "Saecki/crates.nvim"
+rev = "v0.5.1"
+
+[plugins."gitsigns.nvim" ]
+git = "lewis6991/gitsigns.nvim"
+rev = "v0.9.0"
+
+[config]
+auto_setup = false
+
+[treesitter]
+auto_highlight = "all"

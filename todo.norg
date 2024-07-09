@@ -1,0 +1,4 @@
+- (x) `ds'` to delete surrounding `'`
+- ( ) `ds%` to delete any surrounding under cursor
+- ( ) `:h 'matchpairs'`
+- ( ) statusbar

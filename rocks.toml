@@ -66,6 +66,7 @@ nvim-lint = "scm"
 tree-sitter-gomod = "scm"
 tree-sitter-dockerfile = "scm"
 tree-sitter-regex = "scm"
+tree-sitter-swift = "scm"
 
 [plugins."crates.nvim" ]
 git = "Saecki/crates.nvim"

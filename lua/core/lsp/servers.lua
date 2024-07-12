@@ -68,6 +68,7 @@ return {
             },
         },
     },
+    sourcekit = {},
     svelte = {},
     ruff_lsp = {},
     rust_analyzer = {

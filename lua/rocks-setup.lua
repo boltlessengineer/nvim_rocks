@@ -30,8 +30,12 @@ do
     -- Set up configuration options related to rocks.nvim (recommended to leave as default)
     local rocks_config = {
         rocks_path = vim.fs.normalize(install_location),
-        luarocks_binary = vim.fs.joinpath(install_location, "bin", "luarocks"),
     }
+    if vim.fn.has('mac') then
+        rocks_config.luarocks_config = {
+            arch = "macosx-aarch64"
+        }
+    end
 
     vim.g.rocks_nvim = rocks_config
 

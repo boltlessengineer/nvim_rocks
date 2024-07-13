@@ -13,12 +13,12 @@ do
         mason.setup()
     end
 end
--- do
---     local ok, neodev = pcall(require, "neodev")
---     if ok then
---         neodev.setup()
---     end
--- end
+do
+    local ok, lazydev = pcall(require, "lazydev")
+    if ok then
+        lazydev.setup()
+    end
+end
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),

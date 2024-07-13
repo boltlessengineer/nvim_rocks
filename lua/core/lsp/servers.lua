@@ -1,5 +1,9 @@
+---@module "lspconfig"
+
+-- HACK: is `@type lspconfig.options` a thing?
+
 ---@diagnostic disable: missing-fields
----@type lspconfig.options
+---@type table<string, vim.lsp.ClientConfig>
 return {
     clangd = {},
     cssls = {},
@@ -16,6 +20,7 @@ return {
     },
     html = {},
     lua_ls = {
+        -- on_init = require("utils").lazydev_is_not_working,
         settings = {
             Lua = {
                 hint = {

@@ -60,8 +60,6 @@ cmp-nvim-lsp = { git = "hrsh7th/cmp-nvim-lsp" }
 harpoon = { git = "ThePrimeagen/harpoon", branch = "harpoon2" }
 # for some plugins that needs legacy api (e.g. nvim-surround)
 nvim-treesitter-textobjects = { dir = "~/repo/nvim-treesitter-textobjects" }
-# neodev doesn't work when installed from luarocks
-# "neodev.nvim" = { git = "folke/neodev.nvim", rev = "v3.0.0" }
 nvim-lint = "scm"
 tree-sitter-gomod = "scm"
 tree-sitter-dockerfile = "scm"
@@ -72,6 +70,7 @@ tree-sitter-kotlin = "scm"
 tree-sitter-groovy = "scm"
 tree-sitter-ini = "scm"
 tree-sitter-vimdoc = "scm"
+"lazydev.nvim" = "1.6.0"
 
 [plugins."crates.nvim" ]
 git = "Saecki/crates.nvim"

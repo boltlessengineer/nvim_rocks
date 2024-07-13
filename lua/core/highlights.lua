@@ -1,6 +1,6 @@
 local util_hl = require("utils.highlights")
 
-vim.cmd.colorscheme("github_dark_default")
+pcall(vim.cmd.colorscheme, "github_dark_default")
 
 util_hl.set("StatusLineNC", { reverse = true, inherit = "StatusLine" })
 -- util_hl.set("StatusLine", { bold = true })

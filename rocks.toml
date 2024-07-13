@@ -11,12 +11,12 @@
 # List of Neovim plugins to install alongside their versions.
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
-"rocks.nvim" = "2.35.0"
+"rocks.nvim" = "2.35.1"
 "rocks-git.nvim" = "1.5.1"
-"rocks-dev.nvim" = "1.2.3"
+"rocks-dev.nvim" = "1.2.4"
 "rocks-config.nvim" = "2.1.3"
 "rocks-edit.nvim" = "scm"
-"rocks-treesitter.nvim" = "scm"
+"rocks-treesitter.nvim" = { dir = "~/Projects/rocks-treesitter.nvim" }
 # harpoon uses plenary.nvim
 "plenary.nvim" = "scm"
 github-nvim-theme = "1.0.2"
@@ -66,7 +66,12 @@ nvim-lint = "scm"
 tree-sitter-gomod = "scm"
 tree-sitter-dockerfile = "scm"
 tree-sitter-regex = "scm"
+tree-sitter-gitignore = "scm"
 tree-sitter-swift = "scm"
+tree-sitter-kotlin = "scm"
+tree-sitter-groovy = "scm"
+tree-sitter-ini = "scm"
+tree-sitter-vimdoc = "scm"
 
 [plugins."crates.nvim" ]
 git = "Saecki/crates.nvim"

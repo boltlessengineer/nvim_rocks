@@ -1,6 +1,9 @@
 local fzf_lua = require("fzf-lua")
 
 fzf_lua.setup({
+    defaults = {
+        file_icons = false,
+    },
     winopts = {
         fullscreen = true,
         preview = {

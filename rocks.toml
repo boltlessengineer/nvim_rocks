@@ -12,11 +12,11 @@
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
 "rocks.nvim" = "2.35.1"
-"rocks-git.nvim" = "1.5.1"
+"rocks-git.nvim" = "2.0.0"
 "rocks-dev.nvim" = "1.2.4"
-"rocks-config.nvim" = "2.1.3"
+"rocks-config.nvim" = "2.1.4"
 "rocks-edit.nvim" = "scm"
-"rocks-treesitter.nvim" = { dir = "~/Projects/rocks-treesitter.nvim" }
+"rocks-treesitter.nvim" = "scm"
 # harpoon uses plenary.nvim
 "plenary.nvim" = "scm"
 github-nvim-theme = "1.0.2"
@@ -53,11 +53,9 @@ tree-sitter-tsx = "scm"
 tree-sitter-typescript = "scm"
 tree-sitter-yaml = "scm"
 
-"oil.nvim" = { git = "stevearc/oil.nvim", rev = "v2.9.0" }
-nvim-cmp = { git = "hrsh7th/nvim-cmp" }
-cmp-nvim-lsp = { git = "hrsh7th/cmp-nvim-lsp" }
-"leap.nvim" = { git = "ggandor/leap.nvim" }
-harpoon = { git = "ThePrimeagen/harpoon", branch = "harpoon2" }
+"oil.nvim" = "2.11.0"
+# nvim-cmp = { git = "hrsh7th/nvim-cmp" }
+# cmp-nvim-lsp = { git = "hrsh7th/cmp-nvim-lsp" }
 # for some plugins that needs legacy api (e.g. nvim-surround)
 nvim-treesitter-textobjects = { dir = "~/repo/nvim-treesitter-textobjects" }
 nvim-lint = "scm"
@@ -72,13 +70,20 @@ tree-sitter-ini = "scm"
 tree-sitter-vimdoc = "scm"
 "lazydev.nvim" = "1.6.0"
 
+[plugins."gitsigns.nvim"]
+git = "lewis6991/gitsigns.nvim"
+rev = "v0.9.0"
+
 [plugins."crates.nvim" ]
 git = "Saecki/crates.nvim"
 rev = "v0.5.1"
 
-[plugins."gitsigns.nvim" ]
-git = "lewis6991/gitsigns.nvim"
-rev = "v0.9.0"
+[plugins.harpoon]
+git = "ThePrimeagen/harpoon"
+branch = "harpoon2"
+
+[plugins."leap.nvim"]
+git = "ggandor/leap.nvim"
 
 [config]
 auto_setup = false

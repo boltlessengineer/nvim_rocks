@@ -6,7 +6,7 @@ vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
 vim.o.cmdwinheight = 10
 vim.o.colorcolumn = "80"
-vim.o.completeopt = "menu,menuone,preview"
+vim.o.completeopt = "menu,menuone,popup"
 if vim.fn.has("nvim-0.11") then
     vim.opt.completeopt:append("fuzzy")
 end

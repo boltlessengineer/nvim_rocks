@@ -7,11 +7,14 @@
 # List of non-Neovim rocks.
 # This includes things like `toml` or other lua packages.
 [rocks]
+lua-curl = "0.3.13"
+xml2lua = "1.6"
+mimetypes = "1.0.0"
 
 # List of Neovim plugins to install alongside their versions.
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
-"rocks.nvim" = "2.35.1"
+"rocks.nvim" = "2.35.2"
 "rocks-git.nvim" = "2.0.0"
 "rocks-dev.nvim" = "1.2.4"
 "rocks-config.nvim" = "2.1.4"
@@ -29,11 +32,10 @@ nvim-ufo = "1.4.0"
 luasnip = "2.3.0"
 neogit = "scm"
 "kanagawa.nvim" = "scm"
-"rest.nvim" = "2.0.1"
 "mini.ai" = "scm"
 nvim-surround = "2.1.5"
 nvim-treesitter-legacy-api = "0.9.2"
-fzf-lua = "0.0.1363"
+fzf-lua = "0.0.1367"
 
 tree-sitter-css = "scm"
 tree-sitter-ecma = "scm"
@@ -68,7 +70,13 @@ tree-sitter-kotlin = "scm"
 tree-sitter-groovy = "scm"
 tree-sitter-ini = "scm"
 tree-sitter-vimdoc = "scm"
-"lazydev.nvim" = "1.6.0"
+tree-sitter-tmux = "scm"
+"lazydev.nvim" = "1.7.0"
+tree-sitter-astro = "scm"
+tree-sitter-jsonc = "scm"
+tree-sitter-html_tags = "scm"
+tree-sitter-editorconfig = "scm"
+treesj = "scm"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
@@ -80,10 +88,20 @@ rev = "v0.5.1"
 
 [plugins.harpoon]
 git = "ThePrimeagen/harpoon"
+rev = "0378a6c428a0bed6a2781d459d7943843f374bce"
 branch = "harpoon2"
 
 [plugins."leap.nvim"]
 git = "ggandor/leap.nvim"
+rev = "c099aecaf858574909bd38cbadb8543c4dd16611"
+
+[plugins."rest.nvim"]
+git = "aktersnurra/rest.nvim"
+rev = "7d6de91881a1b702fca2fe1e7f5ae88670a42b2a"
+branch = "fix/getregtype"
+
+[plugins."markview.nvim"]
+dir = "~/repo/markview.nvim/"
 
 [config]
 auto_setup = false

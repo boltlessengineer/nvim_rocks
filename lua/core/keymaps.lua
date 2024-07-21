@@ -68,34 +68,14 @@ vim.keymap.set({ "i", "s" }, "<s-tab>", function()
     return vim.snippet.active({ direction = -1 }) and vim.snippet.jump(-1)
 end, { silent = true })
 
--- TODO: automate this
-local function lsp_not_attached(_command)
-    return function()
-        Util.notify.warn("lsp not attached")
-    end
-end
-vim.keymap.set("n", "<leader>ca", lsp_not_attached("code_action"))
-vim.keymap.set("n", "<leader>cr", lsp_not_attached("rename"))
-vim.keymap.set("n", "gd", lsp_not_attached("definition"))
-vim.keymap.set("n", "gr", lsp_not_attached("references"))
-vim.keymap.set("n", "gy", lsp_not_attached("type_definition"))
-vim.keymap.set("n", "gI", lsp_not_attached("implementation"))
-vim.keymap.set("n", "gD", lsp_not_attached("declaration"))
-vim.keymap.set("i", "<c-k>", lsp_not_attached("signature_help"))
-vim.keymap.set("i", "<c-s>", lsp_not_attached("signature_help"))
-
 -- lsp
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),
     callback = function(ev)
-        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = ev.buf })
-        vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { buffer = ev.buf })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf })
-        vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = ev.buf })
-        vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { buffer = ev.buf })
-        vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { buffer = ev.buf })
-        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = ev.buf })
-        vim.keymap.set("i", "<c-k>", vim.lsp.buf.signature_help, { buffer = ev.buf })
+        vim.keymap.set("n", "gry", vim.lsp.buf.type_definition, { buffer = ev.buf })
+        vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { buffer = ev.buf })
+        vim.keymap.set("n", "grd", vim.lsp.buf.declaration, { buffer = ev.buf })
         vim.keymap.set("i", "<c-s>", vim.lsp.buf.signature_help, { buffer = ev.buf })
     end,
 })

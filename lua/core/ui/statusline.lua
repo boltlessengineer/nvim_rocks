@@ -1,3 +1,19 @@
+local function filename()
+    local path = vim.fn.expand("%:p:h")--[[@as string]]
+    path = path:gsub("oil://", "")
+    path = vim.fs.joinpath(path, "") --
+         :gsub("^" .. vim.pesc(vim.fs.joinpath(vim.fn.getcwd(0, 0), "")), "")
+
+    local name = vim.fn.expand("%:p:t")--[[@as string]]
+    if vim.bo.filetype == "oil" then
+        name = path == "" and "." or path
+        path = "oil://"
+    elseif name == "" then
+        name = "[No Name]"
+    end
+    return path .. name
+end
+
 ---Show attached LSP clients in `[name1, name2]` format.
 ---Long server names will be modified. For example, `lua-language-server` will be shorten to `lua-ls`
 ---Returns an empty string if there aren't any attached LSP clients.
@@ -28,10 +44,11 @@ local function tab_size()
     -- end
     return "[ts:" .. tabsize .. "]"
 end
+local _ = vim.lsp.tagfunc
 
 function _G.statusline()
     return table.concat({
-        "%f",
+        filename(),
         "%h%w%r",
         "%=",
         tab_size(),

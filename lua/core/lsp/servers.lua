@@ -5,6 +5,7 @@
 ---@diagnostic disable: missing-fields
 ---@type table<string, vim.lsp.ClientConfig>
 return {
+    astro = {},
     clangd = {},
     cssls = {},
     dartls = {},

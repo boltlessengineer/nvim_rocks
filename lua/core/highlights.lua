@@ -12,6 +12,9 @@ util_hl.set("StatusLineNC", { reverse = true, inherit = "StatusLine" })
 --[[
 some good-looking colorscheems
 
+# dark-theme
+- https://github.com/sho-87/kanagawa-paper.nvim
+
 # light-theme
 - https://github.com/yorickpeterse/nvim-grey
 ]]

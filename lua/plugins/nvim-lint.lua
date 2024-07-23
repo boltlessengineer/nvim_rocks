@@ -2,11 +2,15 @@ local Util = require("utils")
 
 local lint = require("lint")
 
+local function if_executable(cmd)
+    return vim.fn.executeable(cmd) == 1 and { cmd }
+end
+
 lint.linters_by_ft = {
-    dockerfile = { "hadolint" },
-    editorconfig = { "editorconfig-checker" },
-    fish = { "fish" },
-    -- lua = { "luacheck" },
+    dockerfile = if_executable("hadolint"),
+    editorconfig = if_executable("editorconfig-checker"),
+    fish = if_executable("fish"),
+    lua = if_executable("luacheck"),
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {

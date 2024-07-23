@@ -89,9 +89,6 @@ vim.o.updatetime = 200
 vim.o.winminwidth = 10
 vim.o.wrap = false
 
-vim.g.mapleader = " "
--- vim.cmd[[let mapleader = "\<tab>"]]
-
 vim.g.editorconfig = true
 
 -- disable providers (see :h provider)

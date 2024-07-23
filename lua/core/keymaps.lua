@@ -1,5 +1,7 @@
 local Util = require("utils")
 
+vim.g.mapleader = vim.keycode("<space>")
+
 -- Fix default keymap errors
 vim.keymap.set("x", "<c-c>", "<esc>")
 -- Add undo break-points
@@ -42,13 +44,13 @@ vim.keymap.set("x", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" }
 
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-vim.keymap.set({ "n", "x" }, "]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
-vim.keymap.set({ "n", "x" }, "[d", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
 -- stylua: ignore start
-vim.keymap.set({ "n", "x" }, "]e", function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end, { desc = "Next Error" })
-vim.keymap.set({ "n", "x" }, "[e", function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end, { desc = "Prev Error" })
-vim.keymap.set({ "n", "x" }, "]w", function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARN }) end, { desc = "Next Warning" })
-vim.keymap.set({ "n", "x" }, "[w", function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.WARN }) end, { desc = "Prev Warning" })
+vim.keymap.set({ "n", "x" }, "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Next Diagnostic" })
+vim.keymap.set({ "n", "x" }, "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Prev Diagnostic" })
+vim.keymap.set({ "n", "x" }, "]e", function() vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.ERROR }) end, { desc = "Next Error" })
+vim.keymap.set({ "n", "x" }, "[e", function() vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.ERROR }) end, { desc = "Prev Error" })
+vim.keymap.set({ "n", "x" }, "]w", function() vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.WARN }) end, { desc = "Next Warning" })
+vim.keymap.set({ "n", "x" }, "[w", function() vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.WARN }) end, { desc = "Prev Warning" })
 -- stylua: ignore end
 
 -- format

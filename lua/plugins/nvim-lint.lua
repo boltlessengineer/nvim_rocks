@@ -3,7 +3,7 @@ local Util = require("utils")
 local lint = require("lint")
 
 local function if_executable(cmd)
-    return vim.fn.executeable(cmd) == 1 and { cmd }
+    return vim.fn.executable(cmd) == 1 and { cmd }
 end
 
 lint.linters_by_ft = {

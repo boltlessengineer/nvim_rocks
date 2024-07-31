@@ -33,7 +33,7 @@ local function lsp_status()
 end
 
 local function tab_size()
-    local tabsize = vim.bo.tabstop
+    local tabstop = vim.bo.tabstop
     -- local sts = vim.bo.softtabstop
     -- if sts < 0 then
     --     tabsize = vim.bo.shiftwidth
@@ -42,14 +42,13 @@ local function tab_size()
     -- end
     -- if vim.bo.expandtab then
     -- end
-    return "[ts:" .. tabsize .. "]"
+    return "[ts:" .. tabstop .. "]"
 end
-local _ = vim.lsp.tagfunc
 
 function _G.statusline()
     return table.concat({
         filename(),
-        "%h%w%r",
+        "%h%w%m%r",
         "%=",
         tab_size(),
         lsp_status(),

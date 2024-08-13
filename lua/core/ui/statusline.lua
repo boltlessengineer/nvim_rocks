@@ -50,6 +50,7 @@ function _G.statusline()
         filename(),
         "%h%w%m%r",
         "%=",
+        "%y",
         tab_size(),
         lsp_status(),
         "  ",

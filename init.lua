@@ -3,6 +3,7 @@ vim.g.rocks_nvim={
     _log_level = vim.log.levels.INFO
 }
 require("core.keymaps")
+require("core.abbrevs")
 require("core.options")
 require("core.autocmds")
 require("core.highlights")

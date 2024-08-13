@@ -1,6 +1,7 @@
 local Util = require("utils")
 
 vim.g.mapleader = vim.keycode("<space>")
+vim.g.maplocalleader = vim.keycode("<cr>")
 
 -- Fix default keymap errors
 vim.keymap.set("x", "<c-c>", "<esc>")
@@ -74,6 +75,7 @@ end, { silent = true })
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),
     callback = function(ev)
+        vim.keymap.set("n", "grr", "<cmd>FzfLua lsp_references<cr>", { buffer = ev.buf })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf })
         vim.keymap.set("n", "gry", vim.lsp.buf.type_definition, { buffer = ev.buf })
         vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { buffer = ev.buf })
@@ -91,6 +93,7 @@ vim.api.nvim_create_autocmd("User", {
         vim.keymap.set({ "n", "x" }, "[h", "<cmd>Gitsigns prev_hunk<cr>", { desc = "Prev Hunk", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = "Undo Stage Hunk", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gA", "<cmd>Gitsigns stage_buffer<cr>", { desc = "Stage Buffer", buffer = ev.buf })
+        vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", { desc = "Stage Buffer", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", { desc = "Reset Buffer", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk_inline<cr>", { desc = "Preview Inline", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk", buffer = ev.buf })

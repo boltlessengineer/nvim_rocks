@@ -14,6 +14,14 @@ local function filename()
     return path .. name
 end
 
+local function rest()
+    local env_file = vim.b._rest_nvim_env_file
+    if not env_file then
+        return ""
+    end
+    return "(" .. env_file .. ") "
+end
+
 ---Show attached LSP clients in `[name1, name2]` format.
 ---Long server names will be modified. For example, `lua-language-server` will be shorten to `lua-ls`
 ---Returns an empty string if there aren't any attached LSP clients.
@@ -50,6 +58,7 @@ function _G.statusline()
         filename(),
         "%h%w%m%r",
         "%=",
+        rest(),
         "%y",
         tab_size(),
         lsp_status(),

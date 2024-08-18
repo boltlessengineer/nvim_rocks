@@ -23,7 +23,6 @@ nvim-nio = "1.10.0"
 "rocks-treesitter.nvim" = { dir = "~/repo/rocks-treesitter.nvim"}
 # harpoon uses plenary.nvim
 "plenary.nvim" = "scm"
-github-nvim-theme = "1.0.2"
 nvim-lspconfig = "0.1.8"
 "mason.nvim" = "1.10.0"
 "indent-blankline.nvim" = "3.7.1"
@@ -81,6 +80,7 @@ tree-sitter-graphql = "scm"
 tree-sitter-xml = "0.0.2"
 tree-sitter-nix = "scm"
 nvim-ufo = "1.4.0"
+"telescope.nvim" = "scm"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
@@ -111,6 +111,10 @@ dir = "~/repo/rest.nvim"
 [plugins."kulala.nvim"]
 git = "mistweaverco/kulala.nvim"
 rev = "v2.7.0"
+
+[plugins.github-nvim-theme]
+git = "projekt0n/github-nvim-theme"
+rev = "v1.1.2^{}"
 
 [config]
 auto_setup = false

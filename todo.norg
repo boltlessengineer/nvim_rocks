@@ -3,3 +3,5 @@
 - ( ) `:h 'matchpairs'`
 - ( ) statusline
 - ( ) [sg.nvim]{https://github.com/sourcegraph/sg.nvim} support with luarocks maybe?
+- ( ) [rustaceanvim]{https://github.com/mrcjkb/rustaceanvim}
+- ( ) [macro-nvim's amazing util codes]{https://sourcegraph.com/github.com/Bekaboo/nvim@8401d73197e4ec214fe2bae0e0eb9b17a1f4cfbc/-/blob/lua/utils/git.lua?L74}

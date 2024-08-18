@@ -12,3 +12,5 @@ require("core.ui.statusline")
 require("core.lsp")
 
 require("utils.format").setup()
+
+require("kulala").setup()

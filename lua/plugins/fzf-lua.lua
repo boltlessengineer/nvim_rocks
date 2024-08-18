@@ -12,7 +12,13 @@ fzf_lua.setup({
             scrollbar = false,
         },
     },
-    keymap = {},
+    keymap = {
+        builtin = {
+            true,
+            ["<C-f>"] = "preview-page-down",
+            ["<C-b>"] = "preview-page-up",
+        },
+    },
 })
 
 local function find_dirs(opts)

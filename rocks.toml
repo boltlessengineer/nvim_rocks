@@ -15,12 +15,12 @@ nvim-nio = "1.10.0"
 # List of Neovim plugins to install alongside their versions.
 # If the plugin name contains a dot then you must add quotes to the key name!
 [plugins]
-"rocks.nvim" = "2.36.1"
+"rocks.nvim" = "2.37.0"
 "rocks-git.nvim" = "2.0.1"
 "rocks-dev.nvim" = "1.3.0"
-"rocks-config.nvim" = "2.1.4"
+"rocks-config.nvim" = "2.2.0"
 "rocks-edit.nvim" = "scm"
-"rocks-treesitter.nvim" = { dir = "~/repo/rocks-treesitter.nvim"}
+"rocks-treesitter.nvim" = "1.0.3"
 # harpoon uses plenary.nvim
 "plenary.nvim" = "scm"
 nvim-lspconfig = "0.1.8"
@@ -57,7 +57,7 @@ tree-sitter-yaml = "scm"
 # nvim-cmp = { git = "hrsh7th/nvim-cmp" }
 # cmp-nvim-lsp = { git = "hrsh7th/cmp-nvim-lsp" }
 # for some plugins that needs legacy api (e.g. nvim-surround)
-nvim-treesitter-textobjects = { dir = "~/repo/nvim-treesitter-textobjects" }
+# nvim-treesitter-textobjects = { dir = "~/repo/nvim-treesitter-textobjects" }
 nvim-lint = "scm"
 tree-sitter-gomod = "scm"
 tree-sitter-dockerfile = "scm"
@@ -78,7 +78,7 @@ treesj = "scm"
 tree-sitter-gitattributes = "scm"
 tree-sitter-graphql = "scm"
 tree-sitter-xml = "0.0.2"
-tree-sitter-nix = "scm"
+tree-sitter-nix = "0.0.5"
 nvim-ufo = "1.4.0"
 "telescope.nvim" = "scm"
 

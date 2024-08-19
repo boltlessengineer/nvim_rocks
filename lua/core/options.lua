@@ -4,7 +4,8 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.diffopt:append("linematch:60")
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
-vim.o.cmdwinheight = 10
+-- due to stevearc/quicker.nvim#21 issue
+vim.o.cmdwinheight = 8
 vim.o.colorcolumn = "80"
 vim.o.completeopt = "menu,menuone,popup"
 if vim.fn.has("nvim-0.11") == 1 then

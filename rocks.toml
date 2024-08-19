@@ -116,6 +116,10 @@ rev = "v2.7.0"
 git = "projekt0n/github-nvim-theme"
 rev = "v1.1.2^{}"
 
+[plugins."quicker.nvim"]
+git = "stevearc/quicker.nvim"
+rev = "v1.0.0"
+
 [config]
 auto_setup = false
 

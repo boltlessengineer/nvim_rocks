@@ -109,3 +109,16 @@ au("CmdlineEnter", {
         vim.cmd.nohlsearch()
     end),
 })
+
+if vim.o.inccommand == "split" then
+    au("BufEnter", {
+        group = aug("fix_quicker_nvim"),
+        callback = vim.schedule_wrap(function ()
+            if vim.bo.buftype == "quickfix" then
+                vim.o.inccommand = "nosplit"
+            else
+                vim.o.inccommand = "split"
+            end
+        end)
+    })
+end

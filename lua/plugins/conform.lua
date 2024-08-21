@@ -17,7 +17,7 @@ require("conform").setup({
         ["scss"] = { "prettierd" },
         ["less"] = { "prettierd" },
         ["html"] = { "prettierd" },
-        ["json"] = { "prettierd" },
+        ["json"] = { "jq" },
         ["jsonc"] = { "prettierd" },
         ["yaml"] = { "prettierd" },
         ["markdown"] = { "prettierd" },

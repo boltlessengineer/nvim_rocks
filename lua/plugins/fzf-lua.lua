@@ -18,6 +18,9 @@ fzf_lua.setup({
             ["<C-f>"] = "preview-page-down",
             ["<C-b>"] = "preview-page-up",
         },
+        fzf = {
+            ["ctrl-l"] = "toggle-all",
+        },
     },
 })
 

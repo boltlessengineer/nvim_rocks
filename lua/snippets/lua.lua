@@ -36,4 +36,9 @@ ls.add_snippets("lua", {
         i(2),
         t{"", "end"},
     }),
+    s("it", fmt([[
+        it("{}", function ()
+        {}{}
+        end)
+    ]], { i(1), t("\t"), i(2) }))
 })

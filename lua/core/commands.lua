@@ -27,3 +27,23 @@ vim.api.nvim_create_user_command("LspLog", function()
 end, {
     desc = "Open lsp.log file",
 })
+vim.api.nvim_create_user_command("TSEditQuery", function (opts)
+    local lang = opts.fargs[1]
+    local query = opts.fargs[2]
+    local files = vim.treesitter.query.get_files(lang, query)
+    if #files == 1 then
+        vim.cmd.edit(files[1])
+        return
+    elseif #files < 1 then
+        vim.notify(("can't find '%s' query for language '%s'"):format(query, lang))
+        return
+    end
+    vim.ui.select(files, {
+        prompt = "Select query file",
+    }, function (choice)
+        vim.cmd.edit(choice)
+    end)
+end, {
+    nargs = "+",
+    desc = "",
+})

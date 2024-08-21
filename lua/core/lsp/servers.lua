@@ -46,6 +46,13 @@ return {
             },
         },
     },
+    nil_ls = {
+        on_attach = function (client, bufnr)
+            -- if bufIsBig(bufnr) then
+            client.server_capabilities.semanticTokensProvider = nil
+            -- end
+        end
+    },
     tsserver = {
         settings = {
             typescript = {

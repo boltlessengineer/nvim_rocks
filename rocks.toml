@@ -81,6 +81,7 @@ tree-sitter-nix = "0.0.5"
 nvim-ufo = "1.4.0"
 "telescope.nvim" = "scm"
 tree-sitter-http = "scm"
+"rest.nvim" = "3.0.2"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"
@@ -98,9 +99,6 @@ branch = "harpoon2"
 [plugins."leap.nvim"]
 git = "ggandor/leap.nvim"
 rev = "c099aecaf858574909bd38cbadb8543c4dd16611"
-
-[plugins."rest.nvim"]
-dir = "~/repo/rest.nvim"
 
 # temporary disable. this breaks all my floating windows (conceallevel and concealcursors)
 # [plugins."markdown.nvim"]

@@ -23,7 +23,7 @@ end
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),
     callback = function(ev)
-        if vim.fn.has("nvim-0.11") then
+        if vim.fn.has("nvim-0.11") == 1 then
             vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, { autotrigger = false })
         end
     end,

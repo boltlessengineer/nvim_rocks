@@ -82,6 +82,7 @@ nvim-ufo = "1.4.0"
 "telescope.nvim" = "scm"
 tree-sitter-http = "scm"
 "rest.nvim" = "3.0.2"
+"octo.nvim" = "scm"
 
 [plugins."gitsigns.nvim"]
 git = "lewis6991/gitsigns.nvim"

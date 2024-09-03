@@ -57,15 +57,17 @@ function _G.statusline()
     return table.concat({
         filename(),
         "%h%w%m%r",
+        " [%{&ff}] ",
+        -- "(on main)",
         "%=",
         rest(),
         "%y",
         tab_size(),
         lsp_status(),
         "  ",
-        "%-14(%l,%c%V%)",
+        "%-10(%l,%c%V%)",
         "%P",
-    }, "")
+    })
 end
 
 vim.o.statusline = "%{%v:lua._G.statusline()%}"

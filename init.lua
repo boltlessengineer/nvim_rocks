@@ -1,6 +1,9 @@
 require("rocks-setup")
 vim.g.rocks_nvim={
-    _log_level = vim.log.levels.INFO
+    _log_level = vim.log.levels.DEBUG,
+    experimental_features = {
+        "ext_module_dependency_stubs",
+    },
 }
 if vim.fn.has('mac') == 1 then
     vim.g.rocks_nvim = vim.tbl_deep_extend("force", vim.g.rocks_nvim, {

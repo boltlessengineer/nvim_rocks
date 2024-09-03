@@ -20,6 +20,7 @@ return {
         },
     },
     html = {},
+    jsonls = {},
     lua_ls = {
         -- on_init = require("utils").lazydev_is_not_working,
         settings = {

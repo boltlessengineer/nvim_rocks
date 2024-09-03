@@ -15,7 +15,9 @@ require("oil").setup({
         ["<c-p>"] = false,
         ["%"] = function()
             vim.ui.input({ prompt = "Enter filename: " }, function(input)
-                vim.cmd.edit(vim.fn.expand("%") .. input)
+                if input then
+                    vim.cmd.edit(vim.fn.expand("%") .. input)
+                end
             end)
         end,
     },

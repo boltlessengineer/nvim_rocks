@@ -25,6 +25,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(ev)
         if vim.fn.has("nvim-0.11") == 1 then
             vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, { autotrigger = false })
+        else
+            vim.keymap.set("i", "<c-s>", vim.lsp.buf.signature_help, { buffer = ev.buf })
+            vim.keymap.set("n", "gra", vim.lsp.buf.code_action, { buffer = ev.buf })
+            vim.keymap.set("n", "grr", vim.lsp.buf.references, { buffer = ev.buf })
+            vim.keymap.set("n", "grn", vim.lsp.buf.rename, { buffer = ev.buf })
         end
     end,
 })

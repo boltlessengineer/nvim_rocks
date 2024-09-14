@@ -110,6 +110,17 @@ au("CmdlineEnter", {
     end),
 })
 
+au("ColorScheme", {
+    group = aug("user_colorscheme"),
+    callback = function (ev)
+        local tbl = require("core.highlights")
+        local callback = tbl[ev.match]
+        if callback then
+            callback()
+        end
+    end,
+})
+
 if vim.o.inccommand == "split" then
     au("BufEnter", {
         group = aug("fix_quicker_nvim"),

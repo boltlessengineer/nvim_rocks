@@ -54,7 +54,7 @@ return {
             -- end
         end
     },
-    tsserver = {
+    ts_ls = {
         settings = {
             typescript = {
                 inlayHints = {

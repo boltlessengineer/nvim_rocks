@@ -23,7 +23,7 @@ require("core.lsp")
 
 require("utils.format").setup()
 
-local ok, kulala = pcall(require, "kulala")
-if ok then
-    kulala.setup()
-end
+-- local ok, kulala = pcall(require, "kulala")
+-- if ok then
+--     kulala.setup()
+-- end

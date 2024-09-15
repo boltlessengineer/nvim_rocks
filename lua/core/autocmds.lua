@@ -112,13 +112,14 @@ au("CmdlineEnter", {
 
 au("ColorScheme", {
     group = aug("user_colorscheme"),
-    callback = function (ev)
+    -- NOTE: wrap with schedule to prevent require loop
+    callback = vim.schedule_wrap(function (ev)
         local tbl = require("core.highlights")
         local callback = tbl[ev.match]
         if callback then
             callback()
         end
-    end,
+    end),
 })
 
 if vim.o.inccommand == "split" then

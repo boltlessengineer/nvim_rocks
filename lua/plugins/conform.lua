@@ -24,6 +24,7 @@ require("conform").setup({
         ["markdown.mdx"] = { "prettierd" },
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
+        ["nix"] = { "nixfmt" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },

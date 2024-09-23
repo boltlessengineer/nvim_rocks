@@ -45,6 +45,23 @@ vim.keymap.set("x", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" }
 
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+if vim.fn.has("nvim-0.11") == 0 then
+    vim.diagnostic.jump = function (opts)
+        local count = opts.count
+        opts.count = nil
+        if count > 0 then
+            opts.count = nil
+            for _ = 1, count do
+                vim.diagnostic.goto_next(opts)
+            end
+        else
+            opts.count = nil
+            for _ = 1, -count do
+                vim.diagnostic.goto_prev(opts)
+            end
+        end
+    end
+end
 -- stylua: ignore start
 vim.keymap.set({ "n", "x" }, "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Next Diagnostic" })
 vim.keymap.set({ "n", "x" }, "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Prev Diagnostic" })

@@ -25,7 +25,6 @@ nvim-nio = "1.10.0"
 # harpoon uses plenary.nvim
 "plenary.nvim" = "scm"
 nvim-lspconfig = "1.0.0"
-"mason.nvim" = { version = "1.10.0", cmd = "Mason" }
 "indent-blankline.nvim" = "3.7.2"
 "conform.nvim" = "8.1.0"
 "fidget.nvim" = "1.4.1"

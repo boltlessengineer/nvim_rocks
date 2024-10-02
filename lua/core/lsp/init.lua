@@ -8,12 +8,6 @@ vim.diagnostic.config({
 })
 
 do
-    local ok, mason = pcall(require, "mason")
-    if ok then
-        mason.setup()
-    end
-end
-do
     local ok, lazydev = pcall(require, "lazydev")
     if ok then
         lazydev.setup()

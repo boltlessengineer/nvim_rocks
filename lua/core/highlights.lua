@@ -24,6 +24,10 @@ local tbl = {
         -- util_hl.set("WinBarNC", { fg = sep, reverse = true })
         -- util_hl.set("WinSeparator", { fg = sep })
     end,
+    ["default"] = function ()
+        util_hl().set("@markup.raw", { reverse = true })
+        util_hl().set("@markup.raw.block", { reverse = false })
+    end
 }
 
 return tbl

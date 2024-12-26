@@ -20,6 +20,11 @@ ls.add_snippets("lua", {
         {}{}
         end
     ]], { i(1, "name"), i(2), t("\t"), i(3) })),
+    s("cl", fmt([[
+        function({})
+        {}{}
+        end
+    ]], { i(1), t("\t"), i(2) })),
     s("if", fmt([[
         if {} then
         {}{}

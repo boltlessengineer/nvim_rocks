@@ -65,7 +65,7 @@ vim.o.relativenumber = true
 vim.o.scrolloff = 5
 vim.opt.sessionoptions = { "buffers", "curdir", "folds", "help", "tabpages", "winsize" }
 vim.o.shiftround = true
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 0
 vim.opt.shortmess:append({
     W = true, -- Don't print "written" when editing
     I = false, -- No splash screen

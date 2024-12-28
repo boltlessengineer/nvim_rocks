@@ -106,6 +106,15 @@ au("BufNew", {
     end,
 })
 
+-- HACK: ignore htmldjango
+au("FileType", {
+    group = ftplugins,
+    pattern = "htmldjango",
+    callback = function (ev)
+        vim.bo[ev.buf].filetype = "html"
+    end
+})
+
 au("CmdlineEnter", {
     group = aug("auto_hlsearch"),
     callback = vim.schedule_wrap(function()

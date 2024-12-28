@@ -5,4 +5,8 @@
 - ( ) [sg.nvim]{https://github.com/sourcegraph/sg.nvim} support with luarocks maybe?
 - ( ) [rustaceanvim]{https://github.com/mrcjkb/rustaceanvim}
 - ( ) [macro-nvim's amazing util codes]{https://sourcegraph.com/github.com/Bekaboo/nvim@8401d73197e4ec214fe2bae0e0eb9b17a1f4cfbc/-/blob/lua/utils/git.lua?L74}
-- ( ) [ts-comment.nvim](https://github.com/folke/ts-comments.nvim)
+- ( ) [ts-comment.nvim]{https://github.com/folke/ts-comments.nvim}
+- ( ) fuzzy file finder that allows to go up to parent directory
+-- some keymap to exit current directory
+-- `CTRL-Y` mapping to confirm current selection (directory in cursor) but instead of opening it, move fuzzy finding context to that context
+- ( ) [ecolog.nvim]{https://github.com/philosofonusus/ecolog.nvim}

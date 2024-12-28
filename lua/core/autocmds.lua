@@ -43,10 +43,13 @@ au("BufWritePre", {
         if event.match:match("^%w%w+://") then
             return
         end
+        -- TODO: confirm to create parent directories
         local file = vim.uv.fs_realpath(event.match) or event.match
         vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
     end,
 })
+
+-- TODO: rewrite this in style of v0.11 implementation
 
 -- Set options for terminal buffer
 -- Use `BufWinEnter term://*` instead of just `TermOpen`

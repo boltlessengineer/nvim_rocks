@@ -84,7 +84,7 @@ return {
     },
     sourcekit = {},
     svelte = {},
-    ruff_lsp = {},
+    ruff = {},
     rust_analyzer = {
         cargo = {
             buildScripts = {

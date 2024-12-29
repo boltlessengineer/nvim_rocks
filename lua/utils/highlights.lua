@@ -51,7 +51,10 @@ local M = {}
 ---@field clear? boolean clear existing highlight
 ---@field inherit? string inherit other highlight
 
----@private
+local function num_to_hex(color)
+    return string.format("#%06X", color)
+end
+
 ---@param opts? {name?: string, link?: boolean}
 ---@param ns? integer
 ---@return vim.api.keyset.hl_info|nil
@@ -63,8 +66,8 @@ local function get_hl_as_hex(opts, ns)
     if vim.tbl_isempty(hl) then
         return nil
     end
-    hl.fg = hl.fg and ("#%06x"):format(hl.fg)
-    hl.bg = hl.bg and ("#%06x"):format(hl.bg)
+    hl.fg = hl.fg and num_to_hex(hl.fg)
+    hl.bg = hl.bg and num_to_hex(hl.bg)
     return hl
 end
 
@@ -147,6 +150,10 @@ function M.set(ns, name, opts)
     end
 
     local hl = opts.clear and {} or get_hl_as_hex({ name = opts.inherit or name }) or {}
+    -- clear cterm
+    if not opts.cterm then
+        hl.cterm = nil
+    end
     for attribute, data in pairs(opts) do
         if attribute ~= "clear" and attribute ~= "inherit" then
             local new_data = resolve_from_attr(data, attribute)

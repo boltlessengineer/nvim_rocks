@@ -52,4 +52,27 @@ function M.lazydev_is_not_working(client)
     })
 end
 
+---@param lang string
+---@param filetype string?
+function M.load_local_parser(lang, filetype)
+    filetype = filetype or lang
+    local parser = string.format("$HOME/.cache/tree-sitter/lib/%s.so", lang)
+    if vim.fn.has("macunix") == 1 then
+        parser = string.format("$HOME/Library/Caches/tree-sitter/lib/%s.dylib", lang)
+    end
+    vim.treesitter.language.add(lang, {
+        path = vim.fs.normalize(parser),
+        filetype = "http",
+    })
+    if not vim.treesitter.language.get_lang(filetype) then
+        vim.treesitter.language.register(lang, filetype)
+    end
+    vim.api.nvim_create_autocmd("FileType", {
+        pattern = filetype,
+        callback = function (ev)
+            vim.treesitter.start(ev.buf, lang)
+        end
+    })
+end
+
 return M

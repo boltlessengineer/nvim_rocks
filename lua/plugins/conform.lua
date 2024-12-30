@@ -31,7 +31,7 @@ require("conform").setup({
         prettierd = {
             env = {
                 -- FIXME: this doesn't work for some reason
-                PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/utils/linter-config/.prettierrc.json"),
+                PRETTIERD_DEFAULT_CONFIG = vim.api.nvim_get_runtime_file("externals/prettier/prettierrc.json", false)[1],
             },
         },
     },

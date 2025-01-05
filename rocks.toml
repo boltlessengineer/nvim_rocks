@@ -90,6 +90,7 @@ neorg = "9.1.1"
 "markview.nvim" = "24.0.0"
 "cloak.nvim" = "scm"
 tree-sitter-http = "0.0.33"
+showkeys = "scm"
 
 # [plugins."sense.nvim"]
 # dir = "~/projects/sense.nvim/"

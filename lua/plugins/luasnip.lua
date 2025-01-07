@@ -42,13 +42,13 @@ ls.config.set_config({
 
 vim.g.ls_next_choice_map = "<c-j>"
 
-vim.keymap.set({ "i", "s" }, "<c-y>", function()
-    if vim.fn.pumvisible() ~= 0 then
-        return "<c-y>"
-    elseif ls.expandable() then
+vim.keymap.set({ "i", "s" }, "<c-]>", function()
+    if ls.expandable() then
         vim.schedule(function()
             ls.expand()
         end)
+    else
+        return "<c-]>"
     end
 end, { silent = true, expr = true })
 vim.keymap.set({ "i", "s" }, vim.g.ls_next_choice_map, function()

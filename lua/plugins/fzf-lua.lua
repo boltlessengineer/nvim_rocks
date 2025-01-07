@@ -50,19 +50,9 @@ vim.keymap.set("n", "<leader>sk", "<cmd>FzfLua keymaps<cr>")
 vim.keymap.set("n", "<leader>sh", "<cmd>FzfLua highlights<cr>")
 vim.keymap.set("n", "<leader>gs", "<cmd>FzfLua git_status<cr>")
 vim.keymap.set("n", "<leader>gl", "<cmd>FzfLua git_commits<cr>")
--- { "<plug>(lsp_definitions)", "<cmd>Telescope lsp_definitions<cr>" },
--- { "<plug>(lsp_type_definitions)", "<cmd>Telescope lsp_type_definitions<cr>" },
--- { "<plug>(lsp_references)", "<cmd>Telescope lsp_references<cr>" },
--- { "<plug>(lsp_implementations)", "<cmd>Telescope lsp_implementations<cr>" },
---
---
---
---
--- ["top"]            = "gg",
--- ["bottom"]         = "G",
--- ["half-page-up"]   = ("%c"):format(0x15), -- [[]]
--- ["half-page-down"] = ("%c"):format(0x04), -- [[]]
--- ["page-up"]        = ("%c"):format(0x02), -- [[]]
--- ["page-down"]      = ("%c"):format(0x06), -- [[]]
--- ["line-up"]        = "Mgk",               -- ^Y doesn't seem to work
--- ["line-down"]      = "Mgj",               -- ^E doesn't seem to work
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("user.lspattach.fzf", { clear = false }),
+    callback = function(ev)
+        vim.keymap.set("n", "gr/", "<cmd>FzfLua lsp_references<cr>", { buffer = ev.buf })
+    end
+})

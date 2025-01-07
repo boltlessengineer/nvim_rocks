@@ -92,7 +92,7 @@ end, { silent = true })
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspAttach", { clear = false }),
     callback = function(ev)
-        vim.keymap.set("n", "grr", "<cmd>FzfLua lsp_references<cr>", { buffer = ev.buf })
+        vim.keymap.set("n", "grr", vim.lsp.buf.references, { buffer = ev.buf })
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf })
         vim.keymap.set("n", "gry", vim.lsp.buf.type_definition, { buffer = ev.buf })
         vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { buffer = ev.buf })

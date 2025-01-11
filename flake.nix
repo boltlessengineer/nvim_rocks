@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = inputs @ {
@@ -18,11 +19,29 @@
       "aarch64-linux"
       "aarch64-darwin"
     ];
-    perSystem = { system, pkgs, ... }: {
+    perSystem = { system, ... }: let
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          (self: super: {
+            neovim-nightly = inputs.neovim-nightly-overlay.packages.${system}.default;
+          })
+        ];
+      };
+    in {
       devShells.default = pkgs.mkShell {
-        name = "NativeVim devShell";
+        name = "NativeVim (stable) devShell";
         buildInputs = [
           pkgs.neovim
+          pkgs.sumneko-lua-language-server
+          pkgs.stylua
+        ];
+      };
+      devShells.nightly = pkgs.mkShell {
+        name = "NativeVim (nightly) devShell";
+        buildInputs = [
+          pkgs.vim
+          pkgs.neovim-nightly
           pkgs.sumneko-lua-language-server
           pkgs.stylua
         ];

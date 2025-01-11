@@ -101,6 +101,10 @@ dir = "~/repo/rest.nvim/"
 git = "projekt0n/github-nvim-theme"
 rev = "v1.1.2^{}"
 
+[plugins.vim-suda]
+git = "lambdalisue/vim-suda"
+rev = "v1.2.4"
+
 [config]
 auto_setup = false
 

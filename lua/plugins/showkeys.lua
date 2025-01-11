@@ -1,3 +1,3 @@
 require("showkeys").setup({
-    timeout = 1,
+    timeout = 3,
 })

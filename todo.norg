@@ -1,4 +1,5 @@
 - (x) `ds'` to delete surrounding `'`
+- ( ) remove `nvim-lspconfig` in v0.11
 - ( ) `ds%` to delete any surrounding under cursor
 - ( ) `:h 'matchpairs'`
 - (x) statusline

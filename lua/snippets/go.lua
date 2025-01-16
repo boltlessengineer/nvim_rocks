@@ -15,6 +15,7 @@ ls.add_snippets("go", {
         t"\t", c(1, {
             sn(nil, { t"return", i(1), t" err" }),
             t"log.Fatalln(err)",
+            t"panic(err)",
         }),
         t{"", "}"}, i(0),
     }),

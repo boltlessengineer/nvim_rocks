@@ -91,6 +91,8 @@ neorg = "9.1.1"
 "cloak.nvim" = "scm"
 tree-sitter-http = "0.0.33"
 showkeys = "scm"
+tree-sitter-bash = "0.0.40"
+"nui.nvim" = "0.3.0"
 
 # [plugins."sense.nvim"]
 # dir = "~/projects/sense.nvim/"
@@ -104,6 +106,10 @@ rev = "v1.1.2^{}"
 [plugins.vim-suda]
 git = "lambdalisue/vim-suda"
 rev = "v1.2.4"
+
+[plugins."xcodebuild.nvim"]
+git = "wojciech-kulik/xcodebuild.nvim"
+rev = "v5.3.0"
 
 [config]
 auto_setup = false

@@ -25,6 +25,7 @@ require("conform").setup({
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
         ["nix"] = { "nixfmt" },
+        ["swift"] = { "swiftformat" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },

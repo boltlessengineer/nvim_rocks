@@ -2,6 +2,7 @@
 - ( ) remove `nvim-lspconfig` in v0.11
 - ( ) `ds%` to delete any surrounding under cursor
 - ( ) `:h 'matchpairs'`
+- ( ) `i_CTRL-X_CTRL-X` for snippets completion
 - (x) statusline
 - ( ) [sg.nvim]{https://github.com/sourcegraph/sg.nvim} support with luarocks maybe?
 - ( ) [rustaceanvim]{https://github.com/mrcjkb/rustaceanvim}

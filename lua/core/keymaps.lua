@@ -43,6 +43,9 @@ vim.keymap.set("s", "<right>", "<c-g><c-v>A")
 vim.keymap.set("x", "J", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })
 vim.keymap.set("x", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" })
 
+vim.keymap.set("n", "zh", "string(shiftwidth()) . 'zh'", { expr = true })
+vim.keymap.set("n", "zl", "string(shiftwidth()) . 'zl'", { expr = true })
+
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 if vim.fn.has("nvim-0.11") == 0 then

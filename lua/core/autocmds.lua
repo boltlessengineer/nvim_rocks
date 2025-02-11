@@ -18,11 +18,11 @@ au("TextYankPost", {
     end,
 })
 
--- Resize splits if window got resized
-au("VimResized", {
-    group = aug("resize_splits"),
-    command = "tabdo wincmd =",
-})
+-- -- Resize splits if window got resized
+-- au("VimResized", {
+--     group = aug("resize_splits"),
+--     command = "tabdo wincmd =",
+-- })
 
 -- Go to last location when opening a buffer
 au("BufReadPost", {

@@ -31,6 +31,17 @@ vim.keymap.set("x", ">", ">gv")
 -- quickfix list
 vim.keymap.set("n", "<c-j>", "<cmd>cnext<cr>")
 vim.keymap.set("n", "<c-k>", "<cmd>cprev<cr>")
+vim.keymap.set("n", "<c-q>", function()
+    local wininfos = vim.fn.getwininfo()
+    local is_quickfix_open = vim.iter(wininfos):any(function(info)
+        return info.quickfix == 1 and info.loclist ~= 1
+    end)
+    if is_quickfix_open then
+        vim.cmd.cclose()
+    else
+        vim.cmd.copen()
+    end
+end)
 
 vim.keymap.set("n", "<cs-tab>", "<cmd>tabprev<cr>", { desc = "Prev tab" })
 vim.keymap.set("n", "<c-tab>", "<cmd>tabnext<cr>", { desc = "Next tab" })

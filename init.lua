@@ -1,6 +1,5 @@
 require("rocks-setup")
 vim.g.rocks_nvim={
-    _log_level = vim.log.levels.DEBUG,
     experimental_features = {
         "ext_module_dependency_stubs",
     },

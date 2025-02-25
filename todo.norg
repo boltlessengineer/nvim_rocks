@@ -12,3 +12,5 @@
 -- some keymap to exit current directory
 -- `CTRL-Y` mapping to confirm current selection (directory in cursor) but instead of opening it, move fuzzy finding context to that context
 - ( ) [ecolog.nvim]{https://github.com/philosofonusus/ecolog.nvim}
+- ( ) [cord.nvim]{https://github.com/vyfor/cord.nvim/tree/master}
+- ( ) `CTRL-W_CTRL-T` to open a new tab with current buffer

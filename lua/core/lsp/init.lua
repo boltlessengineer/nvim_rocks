@@ -1,7 +1,14 @@
 vim.diagnostic.config({
     underline = true,
-    -- virtual_text
-    -- signs
+    virtual_text = true,
+    signs = {
+        linehl = {
+            [vim.diagnostic.severity.ERROR] = "DiagnosticLineError",
+            [vim.diagnostic.severity.WARN] = "DiagnosticLineWarn",
+            [vim.diagnostic.severity.INFO] = "DiagnosticLineInfo",
+            -- [vim.diagnostic.severity.HINT] = "DiagnosticLineHint",
+        },
+    },
     -- float
     -- update_in_insert
     servirty_sort = true,

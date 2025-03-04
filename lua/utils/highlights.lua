@@ -5,6 +5,7 @@ local M = {}
 -- dealing with types is way hard then I thought
 
 ---@alias HLAttr {from: string, attr: "fg" | "bg", alter: integer}
+---@alias float number
 
 ---@class HLData
 ---@field fg? string foreground

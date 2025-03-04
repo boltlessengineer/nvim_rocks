@@ -27,7 +27,7 @@ dir = "~/projects/sense.nvim/"
 nvim-lspconfig = "1.6.0"
 "indent-blankline.nvim" = "3.8.7"
 "conform.nvim" = "9.0.0"
-# "fidget.nvim" = "1.4.1"
+"fidget.nvim" = "1.4.1"
 luasnip = { version = "2.3.0", event = "InsertEnter" }
 neogit = { version = "scm", cmd = "Neogit" }
 "kanagawa.nvim" = "scm"

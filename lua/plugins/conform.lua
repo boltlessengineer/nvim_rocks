@@ -26,6 +26,7 @@ require("conform").setup({
         ["handlebars"] = { "prettierd" },
         ["nix"] = { "nixfmt" },
         ["swift"] = { "swiftformat" },
+        ["rust"] = { "rustfmt", lsp_format = "fallback" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },

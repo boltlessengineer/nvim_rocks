@@ -99,7 +99,8 @@ au("BufNew", {
     group = ftplugins,
     pattern = {
         "node_modules/**",
-        vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "register/**"),
+        vim.fs.normalize(vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "registry/**")),
+        vim.fs.normalize("~/.rustup/toolchains/*/lib/rustlib/**"),
     },
     callback = function(event)
         vim.bo[event.buf].modifiable = false

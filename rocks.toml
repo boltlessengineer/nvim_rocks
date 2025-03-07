@@ -10,8 +10,6 @@
 xml2lua = "1.6"
 mimetypes = "1.0.0"
 nvim-nio = "1.10.1"
-[rocks."sense.nvim"]
-dir = "~/projects/sense.nvim/"
 
 # List of Neovim plugins to install alongside their versions.
 # If the plugin name contains a dot then you must add quotes to the key name!
@@ -99,6 +97,7 @@ github-nvim-theme= "1.1.2"
 vim-suda= "v1.2.4"
 luautf8 = "0.1.6"
 
+"sense.nvim" = { dir = "~/projects/sense.nvim/" }
 [plugins."rest.nvim"]
 dir = "~/repo/rest.nvim/"
 [plugins."zeta.nvim"]

@@ -1,7 +1,6 @@
 vim.env.LANG = "en_US.UTF-8"
 
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.diffopt:append("linematch:60")
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
 -- due to stevearc/quicker.nvim#21 issue

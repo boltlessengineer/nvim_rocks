@@ -39,6 +39,7 @@ local function find_dirs(opts)
 end
 
 vim.keymap.set("n", "<f1>", "<cmd>FzfLua helptags<cr>")
+vim.keymap.set("n", "<leader>p", "<cmd>FzfLua<cr>")
 vim.keymap.set("n", "<leader>,", "<cmd>FzfLua buffers<cr>")
 vim.keymap.set("n", "<leader>e", "<cmd>FzfLua files<cr>")
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>")

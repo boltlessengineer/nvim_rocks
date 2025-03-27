@@ -112,10 +112,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { buffer = ev.buf })
         vim.keymap.set("n", "grd", vim.lsp.buf.declaration, { buffer = ev.buf })
         vim.keymap.set("i", "<c-s>", vim.lsp.buf.signature_help, { buffer = ev.buf })
-        vim.keymap.set("i", "<f2>", function()
-            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-        end, { buffer = ev.buf })
-        vim.keymap.set("n", "<f2>", function()
+        vim.keymap.set({ "n", "i" }, "<f2>", function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
         end, { buffer = ev.buf })
     end,

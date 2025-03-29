@@ -27,6 +27,7 @@ require("conform").setup({
         ["nix"] = { "nixfmt" },
         ["swift"] = { "swiftformat" },
         ["rust"] = { "rustfmt", lsp_format = "fallback" },
+        ["janet"] = { "janet_format" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },
@@ -35,6 +36,9 @@ require("conform").setup({
                 -- FIXME: this doesn't work for some reason
                 PRETTIERD_DEFAULT_CONFIG = vim.api.nvim_get_runtime_file("externals/prettier/prettierrc.json", false)[1],
             },
+        },
+        janet_format = {
+            command = "janet-format",
         },
     },
 })

@@ -5,6 +5,7 @@ require("ibl").setup({
     exclude = {
         filetypes = {
             "octo",
+            "janet",
         }
     }
 })

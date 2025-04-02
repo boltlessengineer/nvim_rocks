@@ -19,14 +19,11 @@ vim.keymap.set("n", "g/", "gcc", { remap = true })
 vim.keymap.set("x", "g/", "gc", { remap = true })
 vim.keymap.set("n", "Q", "q")
 vim.keymap.set("n", "q", "<cmd>close<cr>")
--- fast indent/dedenting
-vim.keymap.set("n", "<", "<<")
-vim.keymap.set("x", "<", "<gv")
-vim.keymap.set("n", ">", ">>")
-vim.keymap.set("x", ">", ">gv")
--- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
--- vim.keymap.set({ "n", "x", "o" }, "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
--- vim.keymap.set({ "n", "x", "o" }, "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result" })
+-- -- fast indent/dedenting
+-- vim.keymap.set("n", "<", "<<")
+-- vim.keymap.set("x", "<", "<gv")
+-- vim.keymap.set("n", ">", ">>")
+-- vim.keymap.set("x", ">", ">gv")
 
 -- quickfix list
 vim.keymap.set("n", "<c-j>", "<cmd>cnext<cr>")

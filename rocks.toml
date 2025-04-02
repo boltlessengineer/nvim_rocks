@@ -100,6 +100,7 @@ luautf8 = "0.1.6"
 "zeta.nvim"= "rocksdev"
 tree-sitter-janet_simple = "0.0.33"
 tree-sitter-scheme = "0.0.31"
+nvim-parinfer = "1.2.0"
 
 # [plugins."xcodebuild.nvim"]
 # git = "wojciech-kulik/xcodebuild.nvim"

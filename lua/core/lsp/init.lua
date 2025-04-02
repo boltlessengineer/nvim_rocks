@@ -28,7 +28,7 @@ end
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("user.lspattach", { clear = false }),
     callback = function(ev)
-        vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, { autotrigger = true })
+        vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, { autotrigger = false })
     end,
 })
 

@@ -2,6 +2,12 @@ vim.diagnostic.config({
     underline = true,
     virtual_text = true,
     signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.INFO] = "",
+            [vim.diagnostic.severity.HINT] = "",
+        },
         linehl = {
             [vim.diagnostic.severity.ERROR] = "DiagnosticLineError",
             [vim.diagnostic.severity.WARN] = "DiagnosticLineWarn",

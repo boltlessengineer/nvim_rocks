@@ -62,7 +62,7 @@ function M.load_local_parser(lang, filetype)
     end
     vim.treesitter.language.add(lang, {
         path = vim.fs.normalize(parser),
-        filetype = "http",
+        filetype = filetype,
     })
     if not vim.treesitter.language.get_lang(filetype) then
         vim.treesitter.language.register(lang, filetype)

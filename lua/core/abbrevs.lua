@@ -7,4 +7,6 @@ vim.keymap.set("ca", "ROcks", "Rocks")
 vim.cmd[[
 inoreabbrev Hanlder Handler
 inoreabbrev sapce space
+inoreabbrev lien line
+inoreabbrev liens lines
 ]]

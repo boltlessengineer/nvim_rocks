@@ -6,6 +6,8 @@ require("ibl").setup({
         filetypes = {
             "octo",
             "janet",
+            "markdown",
+            "norg",
         }
     }
 })

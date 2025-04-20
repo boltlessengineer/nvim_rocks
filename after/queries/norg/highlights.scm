@@ -77,8 +77,10 @@
 ;; only conceal target when markup exists for that link
 (link
   target: (_) @conceal
-  markup: (_) @markup.link
+  markup: (_)
   (#set! conceal ""))
+(link
+  markup: (_) @markup.link)
 (link
   target: (_) @markup.link
   !markup)

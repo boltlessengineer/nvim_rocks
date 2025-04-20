@@ -102,6 +102,10 @@ tree-sitter-janet_simple = "0.0.33"
 tree-sitter-scheme = "0.0.31"
 nvim-parinfer = "1.2.0"
 
+[plugins."janet.vim"]
+git = "janet-lang/janet.vim"
+rev = "67075b190a44310df356137e35cc1949782b20e0"
+
 # [plugins."xcodebuild.nvim"]
 # git = "wojciech-kulik/xcodebuild.nvim"
 # rev = "v5.3.0"

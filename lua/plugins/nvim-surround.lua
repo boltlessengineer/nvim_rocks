@@ -12,4 +12,5 @@ require("nvim-surround").setup({
         change          = "cs",
         delete          = "ds",
     },
+    indent_lines = false,
 })

@@ -48,8 +48,8 @@ vim.keymap.set("s", "<left>", "<c-g><c-v>I")
 vim.keymap.set("s", "<right>", "<c-g><c-v>A")
 
 -- other useful mappings
-vim.keymap.set("x", "J", ":m '>+1<cr>gv=gv", { silent = true, desc = "Move down" })
-vim.keymap.set("x", "K", ":m '<-2<cr>gv=gv", { silent = true, desc = "Move up" })
+vim.keymap.set("x", "J", ":m '>+1<cr>gv", { silent = true, desc = "Move down" })
+vim.keymap.set("x", "K", ":m '<-2<cr>gv", { silent = true, desc = "Move up" })
 
 vim.keymap.set("n", "zh", "string(shiftwidth()) . 'zh'", { expr = true })
 vim.keymap.set("n", "zl", "string(shiftwidth()) . 'zl'", { expr = true })

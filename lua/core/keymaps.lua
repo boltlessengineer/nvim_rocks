@@ -56,8 +56,9 @@ vim.keymap.set("n", "ycc", function()
     return 'yy' .. vim.v.count1 .. "gcc']p"
 end, { remap = true, expr = true })
 
-vim.keymap.set("n", "zh", "string(shiftwidth()) . 'zh'", { expr = true })
-vim.keymap.set("n", "zl", "string(shiftwidth()) . 'zl'", { expr = true })
+-- TODO: make it work with v:count
+vim.keymap.set("n", "zh", "shiftwidth() . 'zh'", { expr = true })
+vim.keymap.set("n", "zl", "shiftwidth() . 'zl'", { expr = true })
 
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })

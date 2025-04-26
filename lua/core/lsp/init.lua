@@ -20,6 +20,10 @@ vim.diagnostic.config({
     servirty_sort = true,
 })
 
+-- TODO: come back here later, find better way then this
+if vim.env.NOLSP == "1" then
+    return
+end
 do
     local ok, lazydev = pcall(require, "lazydev")
     if ok then

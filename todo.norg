@@ -18,3 +18,4 @@
 - ( ) [substitute.nvim]{https://github.com/gbprod/substitute.nvim}. Maybe map to `xX`
 - ( ) ditch global `q` mapping for `q/` and stuffs
 - ( ) {https://neovim.io/doc/user/options.html#'exrc'}['exrc']
+- ( ) switch to [nvim-bqf]{https://github.com/kevinhwang91/nvim-bqf}

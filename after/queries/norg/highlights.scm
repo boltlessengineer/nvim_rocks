@@ -55,29 +55,38 @@
 (underline) @markup.underline
 (strikethrough) @markup.strikethrough
 (verbatim) @markup.raw.verbatim @nospell
-(inline_macro) @function.macro
+(inline_macro
+  "\\" @function.macro
+  name: (_) @function.macro)
+
+(paragraph) @spell
+(_
+  target: (_) @nospell)
+(verbatim) @nospell
 
 ( [
     (bold [(bold_open) (bold_close)] @conceal)
     (italic [(italic_open) (italic_close)] @conceal)
     (underline [(underline_open) (underline_close)] @conceal)
     (strikethrough [(strikethrough_open) (strikethrough_close)] @conceal)
-    (verbatim [(verbatim_open) (verbatim_close)] @conceal)
+    (verbatim [(verbatim_open) (verbatim_close)] @_markup)
+    (link ["[" "]" "{" "}"] @conceal)
+    (anchor ["[" "]" "{" "}"] @conceal)
   ]
   (#set! conceal ""))
 
-(link
-  [
-    "["
-    "]"
-    "{"
-    "}"
-  ] @conceal
+(_
+  target: (scoped_target
+            . ":" @conceal)
   (#set! conceal ""))
+
 ;; only conceal target when markup exists for that link
 (link
   target: (_) @conceal
   markup: (_)
+  (#set! conceal ""))
+(anchor
+  target: (_) @conceal
   (#set! conceal ""))
 (link
   markup: (_) @markup.link)
@@ -85,26 +94,26 @@
   target: (_) @markup.link
   !markup)
 (anchor
-  [
-    "["
-    "]"
-    "{"
-    target: (_)
-    "}"
-  ] @conceal
-  (#set! conceal ""))
-(anchor
   markup: (_) @markup.link)
 
 (escape_sequence) @string.escape
 (hard_break) @string.escape
 
-((escape_sequence) @conceal
-  (#offset! @conceal 0 0 0 -1)
+((escape_sequence) @_conceal
+  (#offset! @_conceal 0 0 0 -1)
   (#set! conceal ""))
 
 ((hard_break) @conceal
   (#set! conceal ""))
+
+((attributes) @conceal
+  (#has-ancestor? @conceal paragraph)
+  (#set! conceal ""))
+
+(attribute
+  key: (_) @variable.member)
+(attribute
+  value: (_) @string)
 
 (ranged_tag
   [

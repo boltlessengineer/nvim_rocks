@@ -92,7 +92,6 @@ showkeys = "dev"
 tree-sitter-bash = "0.0.40"
 "nui.nvim" = "0.3.0"
 github-nvim-theme= "1.1.2"
-vim-suda= "v1.2.4"
 luautf8 = "0.1.6"
 
 "sense.nvim" = "1.0.1"
@@ -105,6 +104,10 @@ nvim-parinfer = "1.2.0"
 [plugins."janet.vim"]
 git = "janet-lang/janet.vim"
 rev = "67075b190a44310df356137e35cc1949782b20e0"
+
+[plugins.vim-suda]
+git = "lambdalisue/vim-suda"
+rev = "v1.2.4"
 
 # [plugins."xcodebuild.nvim"]
 # git = "wojciech-kulik/xcodebuild.nvim"

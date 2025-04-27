@@ -1,15 +1,11 @@
 require("rocks-setup")
-vim.g.rocks_nvim={
-    experimental_features = {
-        "ext_module_dependency_stubs",
-    },
+vim.g.rocks_nvim.experimental_features = {
+    "ext_module_dependency_stubs",
 }
 if vim.fn.has('mac') == 1 then
-    vim.g.rocks_nvim = vim.tbl_deep_extend("force", vim.g.rocks_nvim, {
-        luarocks_config = {
-            arch = "macosx-aarch64"
-        }
-    })
+    vim.g.rocks_nvim.luarocks_config = {
+        arch = "macosx-aarch64",
+    }
 end
 require("core.keymaps")
 require("core.abbrevs")

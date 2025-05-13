@@ -22,3 +22,12 @@ require("utils.format").setup()
 -- if ok then
 --     kulala.setup()
 -- end
+-- require("utils").load_local_parser("norg", "norg")
+--
+-- vim.lsp.config("neorg-ls", {
+--     cmd = { vim.fs.normalize("~/projects/neorg-ls/target/debug/neorg-language-server") },
+--     root_markers = { "root.toml" },
+--     filetypes = { "norg" },
+-- })
+--
+-- vim.lsp.enable("neorg-ls")

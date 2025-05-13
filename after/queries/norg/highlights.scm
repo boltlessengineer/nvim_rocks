@@ -47,8 +47,7 @@
 (unordered_list_prefix) @markup.list
 (ordered_list_prefix) @markup.list
 (quote) @markup.quote
-((null_list_prefix) @conceal
-  (#set! conceal ""))
+((null_list_prefix) @conceal)
 
 (bold) @markup.strong
 (italic) @markup.italic
@@ -57,7 +56,7 @@
 (verbatim) @markup.raw.verbatim @nospell
 (inline_macro
   "\\" @function.macro
-  name: (_) @function.macro)
+  name: (_) @function.macro) @nospell
 
 (paragraph) @spell
 (_
@@ -79,6 +78,8 @@
   target: (scoped_target
             . ":" @conceal)
   (#set! conceal ""))
+(_
+  markup: (_) @spell)
 
 ;; only conceal target when markup exists for that link
 (link

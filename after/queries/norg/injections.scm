@@ -1,6 +1,6 @@
 (ranged_tag
   name: (_) @_keyword
-  (#any-of? @_keyword "code" "embed")
+  (#any-of? @_keyword "code" "embed" "details")
   ;; TODO: only accept first argument as @_lang
   param: (_) @injection.language
   line: (_) @injection.content

@@ -6,3 +6,7 @@ setlocal define=\\v[(/]def(ault)@!\\S*
 setlocal formatoptions-=t
 setlocal lisp
 setlocal tabstop=2
+
+" HACK: dirty hack to make :ParinferToggle work on every state
+let b:parinfer_enabled=1
+nnoremap <buffer> <cr> <cmd>ParinferToggle<cr>

@@ -58,7 +58,7 @@ function M.load_local_parser(lang, filetype)
     filetype = filetype or lang
     local parser = string.format("$HOME/.cache/tree-sitter/lib/%s.so", lang)
     if vim.fn.has("macunix") == 1 then
-        parser = string.format("$HOME/Library/Caches/tree-sitter/lib/%s.dylib", lang)
+        parser = string.format("$HOME/.cache/tree-sitter/lib/%s.dylib", lang)
     end
     vim.treesitter.language.add(lang, {
         path = vim.fs.normalize(parser),

@@ -36,14 +36,11 @@ ls.add_snippets("norg", {
             updated: {}
             @end
 
-            * {}
-
         ]],
         {
             d(1, file_index_fn),
             f(today_fn, {}, { key = "today" }),
             rep(k"today"),
-            rep(1),
             -- t"",
             -- t"",
         }

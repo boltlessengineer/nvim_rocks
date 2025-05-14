@@ -19,8 +19,6 @@ vim.api.nvim_create_user_command("Journal", function(args)
                 "updated: " .. today,
                 "@end",
                 "",
-                "* " .. input,
-                ""
             }
             vim.cmd.edit(filepath)
             local buf = vim.api.nvim_get_current_buf()

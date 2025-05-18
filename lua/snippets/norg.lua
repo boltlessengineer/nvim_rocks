@@ -6,6 +6,7 @@ local sn = ls.snippet_node
 local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
+local t = ls.text_node
 local k = require("luasnip.nodes.key_indexer").new_key
 local rep = require("luasnip.extras").rep
 local fmt = require("luasnip.extras.fmt").fmt
@@ -20,16 +21,16 @@ end
 local function btime_fn()
     local path = vim.fn.expand("%")
     local stat = vim.uv.fs_stat(path)
-    local btime = stat.birthtime or stat.mtime
-    btime = btime.sec
+    assert(stat)
+    local btime = (stat.birthtime or stat.mtime).sec
     return os.date(DATE_FORMAT, btime)
 end
 
 local function mtime_fn()
     local path = vim.fn.expand("%")
     local stat = vim.uv.fs_stat(path)
-    local mtime = stat.mtime
-    mtime = mtime.sec
+    assert(stat)
+    local mtime = stat.mtime.sec
     return os.date(DATE_FORMAT, mtime)
 end
 
@@ -61,8 +62,30 @@ ls.add_snippets("norg", {
             d(1, file_index_fn),
             f(btime_fn),
             f(mtime_fn),
-            -- t"",
-            -- t"",
         }
     )),
+    -- cool ranged-tag snippet
+    s(
+        { trig = "(@+)([a-z\\-]+)", regTrig = true, wordTrig = false, name = "Dynamic Code Trigger" },
+        {
+            f(function(_, snip)
+                return snip.captures[1]
+            end, {}, { key = "prefix" }),
+            f(function(_, snip)
+                return snip.captures[2]
+            end),
+            i(1),
+            t{"", ""},
+            f(function(_, snip)
+                local current_line = snip.env.TM_CURRENT_LINE
+                local trigger_column = current_line:find(snip.trigger, 1, true)
+                return string.rep(" ", trigger_column - 1)
+            end, {}, { key = "indent" }),
+            i(2),
+            t{"", ""},
+            rep(k("indent")),
+            rep(k("prefix")),
+            t{"end", ""},
+        }
+    ),
 })

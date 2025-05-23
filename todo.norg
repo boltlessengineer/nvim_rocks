@@ -19,3 +19,4 @@
 - ( ) ditch global `q` mapping for `q/` and stuffs
 - ( ) {https://neovim.io/doc/user/options.html#'exrc'}['exrc']
 - ( ) switch to [nvim-bqf]{https://github.com/kevinhwang91/nvim-bqf}
+- ( ) add [neogen]{https://github.com/danymat/neogen}

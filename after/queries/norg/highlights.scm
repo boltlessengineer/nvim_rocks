@@ -69,15 +69,11 @@
     (underline [(underline_open) (underline_close)] @conceal)
     (strikethrough [(strikethrough_open) (strikethrough_close)] @conceal)
     (verbatim [(verbatim_open) (verbatim_close)] @_markup)
-    (link ["[" "]" "{" "}"] @conceal)
-    (anchor ["[" "]" "{" "}"] @conceal)
+    (markup ["[" "]"] @conceal)
+    (target ["{" "}"] @conceal)
   ]
   (#set! conceal ""))
 
-(_
-  target: (scoped_target
-            . ":" @conceal)
-  (#set! conceal ""))
 (_
   markup: (_) @spell)
 

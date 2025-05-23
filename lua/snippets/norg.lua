@@ -66,7 +66,7 @@ ls.add_snippets("norg", {
     )),
     -- cool ranged-tag snippet
     s(
-        { trig = "(@+)([a-z\\-]+)", regTrig = true, wordTrig = false, name = "Dynamic Code Trigger" },
+        { trig = "(@+)([^ ]+)(.*)", regTrig = true, wordTrig = false, name = "Dynamic Code Trigger" },
         {
             f(function(_, snip)
                 return snip.captures[1]
@@ -74,7 +74,10 @@ ls.add_snippets("norg", {
             f(function(_, snip)
                 return snip.captures[2]
             end),
-            i(1),
+            d(1, function(_, snip)
+                local args = snip.captures[3]
+                return sn(nil, { i(1, args) })
+            end),
             t{"", ""},
             f(function(_, snip)
                 local current_line = snip.env.TM_CURRENT_LINE

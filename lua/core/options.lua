@@ -12,6 +12,7 @@ vim.o.conceallevel = 0
 vim.o.confirm = true
 vim.o.cursorline = true
 vim.o.expandtab = true
+vim.o.exrc = true
 -- stylua: ignore
 vim.opt.fillchars = {
     foldopen  = "v",

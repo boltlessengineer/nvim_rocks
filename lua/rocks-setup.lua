@@ -11,7 +11,11 @@ do
         -- `luarocks_binary` so set it manually.
         rocks_config.luarocks_binary = "luarocks"
         rocks_config.luarocks_config = {
-            arch = "macosx-aarch64"
+            arch = "macosx-aarch64",
+            variables = {
+                LUA_DIR = "/nix/store/8438aynxm813i6ksassvgq8bb40f8fln-lua-5.1.5-env",
+                LUA_INCDIR = "/nix/store/8438aynxm813i6ksassvgq8bb40f8fln-lua-5.1.5-env/include",
+            }
         }
     end
 

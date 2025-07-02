@@ -5,6 +5,10 @@ vim.g.rocks_nvim.experimental_features = {
 if vim.fn.has('mac') == 1 then
     vim.g.rocks_nvim.luarocks_config = {
         arch = "macosx-aarch64",
+        variables = {
+            LUA_DIR = "/nix/store/8438aynxm813i6ksassvgq8bb40f8fln-lua-5.1.5-env",
+            LUA_INCDIR = "/nix/store/8438aynxm813i6ksassvgq8bb40f8fln-lua-5.1.5-env/include",
+        },
     }
 end
 require("core.keymaps")

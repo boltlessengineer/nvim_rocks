@@ -21,3 +21,11 @@
 - ( ) {https://neovim.io/doc/user/options.html#'exrc'}['exrc']
 - ( ) switch to [nvim-bqf]{https://github.com/kevinhwang91/nvim-bqf}
 - ( ) add [neogen]{https://github.com/danymat/neogen}
+
+* Plugin Idea
+
+** Harpoon but for windows
+
+- when user closes a window or switch a buffer, save the window information (cursor position, topline, botline, etc)
+- give interface to navigate through windows
+- to avoid populating, treat near windows as same window. (~50 lines)

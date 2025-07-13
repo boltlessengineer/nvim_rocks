@@ -100,6 +100,7 @@ au("BufNew", {
     pattern = {
         "node_modules/**",
         vim.fs.normalize(vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "registry/**")),
+        vim.fs.normalize(vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "git/**")),
         vim.fs.normalize("~/.rustup/toolchains/*/lib/rustlib/**"),
     },
     callback = function(event)

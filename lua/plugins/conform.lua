@@ -29,6 +29,7 @@ require("conform").setup({
         ["rust"] = { "rustfmt", lsp_format = "fallback" },
         ["janet"] = { "janet_format" },
         ["kotlin"] = { "ktfmt" },
+        ["python"] = { "ruff" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },

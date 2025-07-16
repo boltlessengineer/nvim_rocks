@@ -60,9 +60,9 @@ end, { remap = true, expr = true })
 vim.keymap.set("n", "zh", "shiftwidth() . 'zh'", { expr = true })
 vim.keymap.set("n", "zl", "shiftwidth() . 'zl'", { expr = true })
 
--- easy register mappings
-vim.keymap.set("n", "+", '"+')
-vim.keymap.set("n", "_", '"_')
+-- one-key faster to select the black whole register `:h quote_`
+vim.keymap.set({ "n", "x" }, "+", '"+')
+vim.keymap.set({ "n", "x" }, "_", '"_')
 
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })

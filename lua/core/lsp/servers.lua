@@ -54,6 +54,7 @@ return {
             -- end
         end
     },
+    pyright = {},
     ts_ls = {
         settings = {
             typescript = {

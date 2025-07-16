@@ -55,5 +55,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("user.lspattach.fzf", { clear = false }),
     callback = function(ev)
         vim.keymap.set("n", "gr/", "<cmd>FzfLua lsp_references<cr>", { buffer = ev.buf })
+        vim.keymap.set("n", "<leader>cs", "<cmd>FzfLua lsp_document_symbols regex_filter={'Variable',exclude=true}<cr>", { buffer = ev.buf })
     end
 })

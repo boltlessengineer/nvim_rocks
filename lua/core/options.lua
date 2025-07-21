@@ -1,7 +1,7 @@
 vim.env.LANG = "en_US.UTF-8"
 
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.o.clipboard = "unnamedplus"
+vim.o.clipboard = ""
 vim.o.cmdheight = 1
 -- due to stevearc/quicker.nvim#21 issue
 vim.o.cmdwinheight = 8

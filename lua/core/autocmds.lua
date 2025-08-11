@@ -102,6 +102,9 @@ au("BufNew", {
         vim.fs.normalize(vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "registry/**")),
         vim.fs.normalize(vim.fs.joinpath(vim.env.CARGO_HOME or "~/.cargo", "git/**")),
         vim.fs.normalize("~/.rustup/toolchains/*/lib/rustlib/**"),
+        ".venv/**",
+        "^/nix/store/**",
+        vim.fs.normalize("~/go/pkg/mod/**"),
     },
     callback = function(event)
         vim.bo[event.buf].modifiable = false

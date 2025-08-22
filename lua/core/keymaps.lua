@@ -60,6 +60,10 @@ end, { remap = true, expr = true })
 vim.keymap.set("n", "zh", "shiftwidth() . 'zh'", { expr = true })
 vim.keymap.set("n", "zl", "shiftwidth() . 'zl'", { expr = true })
 
+-- easy register mappings
+vim.keymap.set("n", "+", '"+')
+vim.keymap.set("n", "_", '"_')
+
 -- diagnostics
 vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 -- stylua: ignore start

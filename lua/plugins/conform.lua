@@ -28,6 +28,7 @@ require("conform").setup({
         ["swift"] = { "swiftformat" },
         ["rust"] = { "rustfmt", lsp_format = "fallback" },
         ["janet"] = { "janet_format" },
+        ["kotlin"] = { "ktfmt" },
     },
     formatters = {
         injected = { options = { ignore_errors = true } },

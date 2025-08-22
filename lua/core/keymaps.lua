@@ -117,7 +117,7 @@ vim.api.nvim_create_autocmd("User", {
         vim.keymap.set("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", { desc = "Reset Buffer", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns preview_hunk_inline<cr>", { desc = "Preview Inline", buffer = ev.buf })
         vim.keymap.set("n", "<leader>gP", "<cmd>Gitsigns preview_hunk<cr>", { desc = "Preview Hunk", buffer = ev.buf })
-        vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", { desc = "Blame Line", buffer = ev.buf })
+        vim.keymap.set("n", "<leader>gk", "<cmd>Gitsigns blame_line<cr>", { desc = "Blame Line", buffer = ev.buf })
         vim.keymap.set({ "n", "x" }, "<leader>ga", "<cmd>Gitsigns stage_hunk<cr>", { desc = "Stage Hunk", buffer = ev.buf })
         vim.keymap.set({ "n", "x" }, "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "Reset Hunk", buffer = ev.buf })
     end,

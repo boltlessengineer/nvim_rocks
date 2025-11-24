@@ -5,6 +5,7 @@ require("conform").setup({
         quiet = false,
     },
     formatters_by_ft = {
+        ["c"] = { "clang-format" },
         ["lua"] = { "stylua" },
         ["fish"] = { "fish_indent" },
         ["sh"] = { "shfmt" },

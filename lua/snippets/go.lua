@@ -42,4 +42,7 @@ ls.add_snippets("go", {
         {}}})
         }}
     ]], { i(1, "sampleMiddleware"), t("\t"), t("\t\t"), i(2), t("\t") })),
+
+    s("pt", t("panic(\"todo\")")),
+    s("pu", t("panic(\"unimplemented\")")),
 })

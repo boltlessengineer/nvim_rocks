@@ -52,7 +52,16 @@ return {
             -- if bufIsBig(bufnr) then
             client.server_capabilities.semanticTokensProvider = nil
             -- end
-        end
+        end,
+        settings = {
+            ["nil"] = {
+                nix = {
+                    flake = {
+                        autoArchive = false,
+                    },
+                },
+            },
+        },
     },
     ts_ls = {
         settings = {

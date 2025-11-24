@@ -29,3 +29,7 @@
 - when user closes a window or switch a buffer, save the window information (cursor position, topline, botline, etc)
 - give interface to navigate through windows
 - to avoid populating, treat near windows as same window. (~50 lines)
+
+** `CTRL-X_CTRL-S`
+
+complete string that matches a pattern via tree-sitter object
